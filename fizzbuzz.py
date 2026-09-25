@@ -1,22 +1,20 @@
-"""Classic FizzBuzz exercise for practice."""
+"""Classic FizzBuzz for git practice."""
 
 
 def fizzbuzz(n):
-    """Return FizzBuzz string for a single number n."""
-    if n % 15 == 0:
-        return "FizzBuzz"
-    if n % 3 == 0:
-        return "Fizz"
-    if n % 5 == 0:
-        return "Buzz"
-    return str(n)
-
-
-def run(limit):
-    """Print FizzBuzz from 1 to limit."""
-    for i in range(1, limit + 1):
-        print(fizzbuzz(i))
+    result = []
+    for i in range(1, n + 1):
+        if i % 15 == 0:
+            result.append("FizzBuzz")
+        elif i % 3 == 0:
+            result.append("Fizz")
+        elif i % 5 == 0:
+            result.append("Buzz")
+        else:
+            result.append(str(i))
+    return result
 
 
 if __name__ == "__main__":
-    run(20)
+    for line in fizzbuzz(20):
+        print(line)
